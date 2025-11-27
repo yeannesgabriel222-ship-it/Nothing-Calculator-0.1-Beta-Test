@@ -3,32 +3,51 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Nothing Calculator 0.1 Beta</title>
-    <style>
-        body {
-            display: flex;
-            flex-direction: column;
-            align-items: center;
-            justify-content: center;
-            height: 100vh;
-            font-family: Arial, sans-serif;
-            background: #000;
-            color: #fff;
-        }
-        img {
-            width: 180px;
-            margin-bottom: 20px;
-            border-radius: 25px;
-        }
-        .text {
-            text-align: center;
-            font-size: 22px;
-            max-width: 300px;
-        }
-    </style>
+    <title>Nothing Calculator</title>
+
+    <!-- Estilos -->
+    <link rel="stylesheet" href="style.css">
+
+    <!-- Script -->
+    <script src="script.js" defer></script>
 </head>
 <body>
-    <img src="icon.png" alt="Nothing Calculator Icon">
-    <div class="text">Nothing Calculator<br><small>0.1 Beta Test</small></div>
+
+    <div class="calculator">
+        <div id="display" class="display">0</div>
+
+        <div class="buttons">
+
+            <!-- Fila 1 -->
+            <button onclick="clearDisplay()" class="btn-grey">C</button>
+            <button onclick="backspace()" class="btn-grey">⌫</button>
+            <button onclick="appendOperator('/')" class="btn-grey">÷</button>
+
+            <!-- Fila 2 -->
+            <button onclick="appendNumber('7')">7</button>
+            <button onclick="appendNumber('8')">8</button>
+            <button onclick="appendNumber('9')">9</button>
+            <button onclick="appendOperator('*')" class="btn-grey">×</button>
+
+            <!-- Fila 3 -->
+            <button onclick="appendNumber('4')">4</button>
+            <button onclick="appendNumber('5')">5</button>
+            <button onclick="appendNumber('6')">6</button>
+            <button onclick="appendOperator('-')" class="btn-grey">−</button>
+
+            <!-- Fila 4 -->
+            <button onclick="appendNumber('1')">1</button>
+            <button onclick="appendNumber('2')">2</button>
+            <button onclick="appendNumber('3')">3</button>
+            <button onclick="appendOperator('+')" class="btn-grey">+</button>
+
+            <!-- Fila 5 -->
+            <button onclick="appendNumber('0')" class="btn-zero">0</button>
+            <button onclick="appendDot()">.</button>
+            <button onclick="calculate()" class="btn-red">=</button>
+
+        </div>
+    </div>
+
 </body>
 </html>
